@@ -1,0 +1,55 @@
+<hr class="border-b border-primary md:w-1/5 mx-auto">
+
+{% include 'partials/stores.twig' %}
+
+<footer class="bg-primary py-4">
+    <div class="container mx-auto text-white">
+        <div class="md:flex">
+            <div class="md:w-1/5">
+                <strong class="mb-2 block">Adres</strong>
+                <p>
+                    {{ site.name }}
+                </p>
+                <p>
+                    {{ theme.theme_mod('address') }}
+                </p>
+                <p>
+                    {{ theme.theme_mod('postalcode') }} {{ theme.theme_mod('city') }}
+                </p>
+            </div>
+            <div class="md:w-1/5">
+                <strong class="mb-2 block">Contact</strong>
+                <p>
+                    <a href="tel:{{ theme.theme_mod('phonenumber') }}<"><i class="fas fa-phone mr-2"></i>{{ theme.theme_mod('phonenumber') }}</a>
+                </p>
+                <p>
+                    <a href="{{ theme.theme_mod('emailaddress') }}"><i class="fas fa-envelope mr-2"></i>{{ theme.theme_mod('emailaddress') }}</a>
+                </p>
+
+                <p>
+                    KVK nummer: 34306494
+                </p>
+                <p>
+                    BTW nummer: 1780.00.103.B01
+                </p>
+                <p>
+                    Bank: NL 09 TRIO 0197 9983 13
+                </p>
+            </div>
+            {% if theme.theme_mod('attribution-link') %}
+                <div class="ml-auto">
+                    <strong class="mb-2 block">{{ theme.theme_mod('attribution-title') }}</strong>
+                    {{ theme.theme_mod('attribution-payoff')|wpautop }}
+                </div>
+
+                <div class="md:w-1/5 ml-4">
+                    <img src="{{ Image(theme.theme_mod('attribution-logo')).src }}" alt="{{ Image(theme.theme_mod('attribution-logo')).alt }}" class="logo__attributie">
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</footer>
+
+{% if theme.theme_mod('std-organisation') %}
+    {% include 'std/organisation.twig' %}
+{% endif %}

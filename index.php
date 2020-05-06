@@ -1,10 +1,16 @@
 <?php
 
-$context = \Timber\Timber::get_context();
+use Timber\Timber;
 
-return \Timber\Timber::render(
-    [
-        'views/page.twig',
-    ],
-    $context
-);
+$context         = Timber::get_context();
+$context['post'] = Timber::get_post();
+
+$templates = [
+    'views/page.twig'
+];
+
+if (is_checkout()) {
+    array_unshift($templates, 'views/woocommerce.html.twig');
+}
+
+Timber::render($templates, $context);

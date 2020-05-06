@@ -1,0 +1,16 @@
+.tease__store--wrapper {
+  text-align: center;
+  margin-bottom: 3rem;
+  @media screen and (min-width: 1024px) {
+    width: 100/3 * 1%;
+  }
+
+  .tease__store--title {
+    font-size: 1.5rem;
+  }
+}
+
+.tease__store--img {
+  margin-left: auto;
+  margin-right: auto;
+}

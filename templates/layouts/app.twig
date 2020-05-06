@@ -1,19 +1,16 @@
 <!doctype html>
 <html lang="{{ site.language }}">
 <head>
-    {% block head %}{% include 'templates/layouts/helpers/head.twig' %}{% endblock %}
+    {% block head %}{% include 'layouts/helpers/head.twig' %}{% endblock %}
     {{ fn('wp_head') }}
 </head>
 <body {{ fn('body_class') }}>
-{% block header %}
-{% include 'templates/layouts/helpers/header.twig' %}
-{% endblock %}
+
+{% block header %}{% include 'layouts/helpers/header.twig' %}{% endblock %}
 
 {% block content %}{{ post.content }}{% endblock %}
 
-{% block footer %}
-{% include 'templates/layouts/helpers/footer.twig' %}
-{% endblock footer %}
+{% block footer %}{% include 'layouts/helpers/footer.twig' %}{% endblock footer %}
 
 {{ fn('wp_footer') }}
 </body>

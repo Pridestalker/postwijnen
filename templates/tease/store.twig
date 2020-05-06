@@ -1,0 +1,9 @@
+<article class="tease__store--wrapper">
+    <a href="{{ post.meta('link') }}" target="_blank" class="">
+        {% if post.thumbnail %}
+            <img src="{{ post.thumbnail.src('lazy-thumbnail') }}" data-djc-lazy="{{ post.thumbnail.src }}" alt="{{ post.title }}" class="tease__store--img">
+        {% endif %}
+        <h3 class="tease__store--title">{{ post.title }}</h3>
+        <div class="tease__store--preview">{{ post.preview.read_more('')|wpautop }}</div>
+    </a>
+</article>

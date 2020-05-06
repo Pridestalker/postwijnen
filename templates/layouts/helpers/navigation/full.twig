@@ -1,0 +1,7 @@
+<nav class="nav-menu">
+    {% for item in primaryMenu.items %}
+        <a href="{{ item.link }}" class="nav-item">
+            {{ item.title }}
+        </a>
+    {% endfor %}
+</nav>

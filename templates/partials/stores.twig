@@ -1,0 +1,9 @@
+<section class="container mx-auto content py-8 px-4 md:px-0">
+    <h2>{{ __('Onze online winkels', 'pstw') }}</h2>
+
+    <div class="md:flex flex-wrap justify-between">
+        {% for store in stores %}
+            {% include 'tease/store.twig' with { post:store } %}
+        {% endfor %}
+    </div>
+</section>

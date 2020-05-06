@@ -1,0 +1,13 @@
+@tailwind base;
+
+@tailwind components;
+
+@import "themes/default",
+        "vendors/all",
+        "abstracts/all",
+        "base/all",
+        "components/all",
+        "layout/all",
+        "pages/all";
+
+@tailwind utilities;

@@ -1,0 +1,25 @@
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Store",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "{{ theme.theme_mod('city') }}, {{ theme.theme_mod('country') }}",
+            "postalCode": "{{ theme.theme_mod('postalcode') }}",
+            "streetAddress": "{{ theme.theme_mod('address') }}"
+        },
+        "email": "{{ theme.theme_mod('emailaddress') }}",
+        "name": "{{ site.title }}",
+        "url": "{{ site.link }}",
+        "image": "{{ Image(theme.theme_mod('custom_logo')).src }}",
+        "telephone": "{{ theme.theme_mod('phonenumber') }}",
+        "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "{{ theme.theme_mod('phonenumber') }}",
+              "contactType": "customer service",
+              "availableLanguage": "Dutch"
+            }
+        ]
+    }
+</script>

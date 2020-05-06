@@ -1,0 +1,14 @@
+html {
+  font-family: $fontFamily;
+}
+
+.content {
+  text-align: center;
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-size: 1.875rem;
+    padding-bottom: 1rem;
+  }
+}

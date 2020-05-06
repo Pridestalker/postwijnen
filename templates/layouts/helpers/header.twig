@@ -1,0 +1,19 @@
+<header class="py-2">
+    <div class="container mx-auto px-4 md:px-0">
+        <div class="flex">
+            <a href="{{ site.link }}">
+                <img src="{{ Image(theme.theme_mod('custom_logo')).src }}" alt="{{ site.name }}" class="logo">
+            </a>
+            <button class="ml-auto relative menu-button" data-action="openMenu">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+</header>
+{% include 'layouts/helpers/navigation/full.twig' %}
+
+<script>
+    document.querySelector('[data-action="openMenu"]').addEventListener('click', function () {
+        document.querySelector('.nav-menu').classList.toggle('active');
+    })
+</script>
